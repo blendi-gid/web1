@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Info rreth Sistemit Diellor!</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Kalam&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Train+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=ZCOOL+XiaoWei&display=swap" rel="stylesheet">
+     <link rel="icon" href="icon.png">
+    <style>
+        body{
+            background-image: url(https://i.pinimg.com/originals/8e/46/15/8e46150f790fbefe438d9c2767c32ad1.gif);
+            text-align: center;
+            background-repeat: repeat;
+            background-size: 400px;
+            margin: 50px;
+            user-select: none;
+        }
+        h1{
+            background-color: black;
+            text-align: center;
+            z-index: 3;
+            position: sticky;
+            top: 0px;
+            font-weight: 100;
+            color: rgb(4, 0, 255);
+            text-shadow: 2.6px 2.6px 2px rgb(255, 255, 255),
+                 0 0 2.5em hotpink,
+                 0 0 0.25em hotpink;
+            font-size: 40px;
+            font-family: 'Train One', cursive;
+        }
+        p{
+            background-color: black;
+            font-size: 25px;
+            color: white;
+            font-family: 'ZCOOL XiaoWei', serif;
+            word-spacing: 8px;
+        }
+        h6{
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            z-index: 5;
+        }
+        .up,.back{
+            border-radius: 50%;
+            height: 80px;
+        }
+        h5{
+            position: fixed;
+            bottom: 25px;
+            left: 25px;
+            z-index: 5;
+        }
+        a.vi{
+            color: whitesmoke;
+            text-shadow: none;
+            border: 2px ;
+        }
+        .pushable {
+        visibility: hidden;
+          position: relative;
+          border: none;
+          background: transparent;
+          padding: 0;
+          cursor: pointer;
+          outline-offset: 4px;
+          transition: filter 250ms;
+        }
+        .shadow {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          border-radius: 12px;
+          background: hsl(0deg 0% 0% / 0.25);
+          will-change: transform;
+          transform: translateY(2px);
+          transition:
+            transform
+            600ms
+            cubic-bezier(.3, .7, .4, 1);
+        }
+        .edge {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          border-radius: 12px;
+          background: linear-gradient(
+            to left,
+            hsl(340deg 100% 16%) 0%,
+            hsl(340deg 100% 32%) 8%,
+            hsl(340deg 100% 32%) 92%,
+            hsl(340deg 100% 16%) 100%
+          );
+        }
+        .front {
+          display: block;
+          position: relative;
+          padding: 12px 42px;
+          border-radius: 12px;
+          font-size: 1.25rem;
+          color: white;
+          background: hsl(345deg 100% 47%);
+          will-change: transform;
+          transform: translateY(-4px);
+          transition:
+            transform
+            600ms
+            cubic-bezier(.3, .7, .4, 1);
+        }
+        .pushable:hover {
+          filter: brightness(110%);
+        }
+        .pushable:hover .front {
+          transform: translateY(-6px);
+          transition:
+            transform
+            250ms
+            cubic-bezier(.3, .7, .4, 1.5);
+        }
+        .pushable:active .front {
+          transform: translateY(-2px);
+          transition: transform 34ms;
+        }
+        .pushable:hover .shadow {
+          transform: translateY(4px);
+          transition:
+            transform
+            250ms
+            cubic-bezier(.3, .7, .4, 1.5);
+        }
+        .pushable:active .shadow {
+          transform: translateY(1px);
+          transition: transform 34ms;
+        }
+        .pushable:focus:not(:focus-visible) {
+          outline: none;
+        }
+        @media only screen and (max-width: 500px) {
+            body{
+                background-size: contain;
+                margin: 20px;
+            }
+            h6{
+                position: fixed;
+                bottom: 5px;
+                right: 5px;
+                z-index: 5;
+                display: none;
+            }
+            .up,.back{
+                border-radius: 50%;
+                height: 50px;
+                visibility: hidden;
+            }
+            h5{
+                position: fixed;
+                bottom: 5px;
+                left: 5px;
+                z-index: 5;
+                display: none;
+            }
+            .hidden{
+                 visibility: hidden;
+            }
+            .vi{
+                visibility: visible;
+            }
+            .pushable{
+                visibility: visible;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h5>
+        <a href="index2.html">
+            <img class="back" src="https://www.icebergwebdesign.com/wp-content/uploads/2015/11/back-blue-button-xs.jpg" alt="Back">
+        </a>
+    </h5>
+    <h6><a href="#top">
+        <img class="up" src="https://png.pngtree.com/png-vector/20190806/ourlarge/pngtree-arrow-arrows-up-upload-blue-dotted-line-line-icon-png-image_1651826.jpg" alt="Up">
+    </a></h6>
+
+    <h2 id="top" style="text-align: center; background-color: black;"><a class="head" href="index.html">Sistemi Diellor</a></h2>
+<br>
+
+<h1>Hyrje &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h1>
+<br>
+    <p>
+        Sistemi Diellor është sistemi i lidhur gravitacionalisht i Diellit dhe i objekteve që rrotullohen rreth tij, drejtpërdrejt ose tërthorazi. Nga objektet që rrotullohen drejtpërdrejt rreth Diellit, më të mëdhenjtë janë tetë planetët, ndërsa pjesa tjetër janë objekte më të vogla, planetët xhuxh dhe trupat e vegjël të Sistemit Diellor. Nga objektet që rrotullohen në mënyrë indirekte rreth Diellit - satelitët natyrorë - dy janë më të mëdhenj se planeti më i vogël, Mërkuri.    </p>
+
+    <p>
+        Sistemi Diellor u formua 4.6 miliardë vjet më parë nga kolapsi gravitacional i një reje gjigante molekulare ndëryjore. Pjesa dërrmuese e masës së sistemit është në Diell, me pjesën më të madhe të masës së mbetur në Jupiter. Katër planetët e brendshëm më të vegjël, Mërkuri, Venusi, Toka dhe Marsi, janë planetë tokësorë, të përbërë kryesisht nga shkëmbi dhe metali. Katër planetët e jashtëm janë planetë gjigantë, duke qenë dukshëm më masivë se planetët tokësorë. Dy planetët më të mëdhenj, Jupiteri dhe Saturni, janë gjigantë gazi, të përbërë kryesisht nga hidrogjen dhe helium; dy planetët më të jashtëm, Urani dhe Neptuni, janë gjigantë akulli, që përbëhen kryesisht nga substanca me pikë shkrirjeje relativisht të lartë krahasuar me hidrogjenin dhe heliumin, të quajtura të paqëndrueshme, si uji, amoniaku dhe metani. Të tetë planetët kanë orbita pothuajse rrethore që shtrihen brenda një disku pothuajse të sheshtë të quajtur ekliptik.    </p>
+<br>
+<button class="pushable">
+    <span class="front">
+      <a class="vi" href="https://github.com/rishika-sharma/Images/blob/main/480px-Solar_sys8.jpg?raw=true">View Image</a>
+    </span>
+  </button>
+
+    <img class="hidden" height="500px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Solar_sys8.jpg/480px-Solar_sys8.jpg" alt="The Solar System">
+<br>
+    <p>
+        Sistemi Diellor përmban edhe objekte më të vogla. Brezi i asteroideve, i cili shtrihet midis orbitave të Marsit dhe Jupiterit, përmban kryesisht objekte të përbëra, si planetët tokësorë, nga shkëmbi dhe metali. Përtej orbitës së Neptunit shtrihen brezi Kuiper dhe disku i shpërndarë, të cilat janë popullata të objekteve trans-neptuniane të përbëra kryesisht nga akulli, dhe përtej tyre një popullatë sednoidësh e sapo zbuluar. Brenda këtyre popullsive, disa objekte janë mjaft të mëdha për t'u rrumbullakosur nën gravitetin e tyre, megjithëse ka një debat të konsiderueshëm se sa do të jenë. Objekte të tilla kategorizohen si planetë xhuxh. Planeti i vetëm xhuxh i sigurt është Plutoni, me një objekt tjetër trans-neptunian, Eris, që pritet të jetë, dhe asteroidi Ceres të paktën afër të qenit një planet xhuxh. Përveç këtyre dy rajoneve, popullata të tjera me trup të vogël, duke përfshirë kometat, centaurët dhe retë e pluhurit ndërplanetar, udhëtojnë lirshëm ndërmjet rajoneve. Gjashtë nga planetët, gjashtë planetët më të mëdhenj të mundshëm xhuxh, dhe shumë nga trupat më të vegjël janë orbituar nga satelitë natyrorë, që zakonisht quhen "hëna" pas Hënës. Secili prej planeteve të jashtëm është i rrethuar nga unaza planetare të pluhurit dhe objekteve të tjera të vogla.    </p>
+<br>
+
+<button class="pushable">
+    <span class="front">
+      <a class="vi" href="https://raw.githubusercontent.com/rishika-sharma/Images/main/480px-EightTNOs.png">View Image</a>
+    </span>
+  </button>
+    <img class="hidden" height="500px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/EightTNOs.png/480px-EightTNOs.png" alt="trans-Neptunian objects">
+<br>
+    <p>
+        Era diellore, një rrymë grimcash të ngarkuara që rrjedhin nga Dielli, krijon një rajon të ngjashëm me flluska në mjedisin ndëryjor të njohur si heliosfera. Heliopauza është pika në të cilën presioni nga era diellore është i barabartë me presionin e kundërt të mediumit ndëryjor; ai shtrihet deri në skajin e diskut të shpërndarë. Reja Oort, e cila mendohet të jetë burimi për kometat me periudha të gjata, mund të ekzistojë gjithashtu në një distancë afërsisht një mijë herë më larg se heliosfera. Sistemi Diellor ndodhet në krahun e Orionit, 26,000 vite dritë nga qendra e galaktikës Rruga e Qumështit.    </p>
+<br>
+    <h1>Zbulimi dhe eksplorimi &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h1>
+<br>
+    <p>
+        Për pjesën më të madhe të historisë, njerëzimi nuk e njohu ose nuk e kuptoi konceptin e Sistemit Diellor. Shumica e njerëzve deri në Mesjetën e Vonë-Rilindjes besonin se Toka ishte e palëvizshme në qendër të universit dhe kategorikisht e ndryshme nga objektet hyjnore ose eterike që lëviznin nëpër qiell. Megjithëse filozofi grek Aristarku i Samos kishte spekuluar për një rirenditje heliocentrike të kozmosit, Nikola Koperniku ishte i pari që zhvilloi një sistem heliocentrik parashikues matematikisht.    </p>
+    <p>
+        Në shekullin e 17-të, Galileo zbuloi se Dielli ishte i shënuar me njolla diellore dhe se Jupiteri kishte katër satelitë në orbitë rreth tij. Christiaan Huygens vazhdoi nga zbulimet e Galileos duke zbuluar hënën e Saturnit Titan dhe formën e unazave të Saturnit. Edmond Halley kuptoi në 1705 se shikimet e përsëritura të një komete po regjistronin të njëjtin objekt, duke u kthyer rregullisht një herë në 75-76 vjet. Kjo ishte prova e parë që diçka tjetër përveç planetëve rrotullohej rreth Diellit.[15] Rreth kësaj kohe (1704), termi "Sistemi Diellor" u shfaq për herë të parë në anglisht. Në vitin 1838, Friedrich Bessel mati me sukses një paralaksë yjore, një ndryshim i dukshëm në pozicionin e një ylli të krijuar nga lëvizja e Tokës rreth Diellit, duke siguruar provën e parë të drejtpërdrejtë, eksperimentale të heliocentrizmit. Përmirësimet në astronominë vëzhguese dhe përdorimin e anijeve kozmike pa ekuipazh kanë mundësuar që atëherë hetimin e detajuar të trupave të tjerë që rrotullohen rreth Diellit.    </p>
+<br>
+<button class="pushable">
+    <span class="front">
+      <a class="vi" href="https://raw.githubusercontent.com/rishika-sharma/Images/main/page1-1350px-Solar-System.pdf.jpg">View Image</a>
+    </span>
+  </button>
+    <img class="hidden" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Solar-System.pdf/page1-1350px-Solar-System.pdf.jpg" alt="overview of solar system">
+<br><br><br><br><br><br><br><br><br><br>
+
+</body>
+</html>

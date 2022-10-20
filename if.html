@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Kalam&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Train+One&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=ZCOOL+XiaoWei&display=swap" rel="stylesheet">
+     <link rel="icon" href="icon.png">
+    <title>Fakte Interesante</title>
+    <style>
+        body{
+            background-image: url(https://i.pinimg.com/originals/8e/46/15/8e46150f790fbefe438d9c2767c32ad1.gif);
+            text-align: center;
+            background-repeat: repeat;
+            background-size: 400px;
+            margin: 50px;
+            user-select: none;
+        }
+        h6{
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            z-index: 5;
+        }
+        .up,.back{
+            border-radius: 50%;
+            height: 80px;
+        }
+        h5{
+            position: fixed;
+            bottom: 25px;
+            left: 25px;
+            z-index: 5;
+        }
+        h1{
+            z-index: 3;
+            background-color: black;
+            text-align: center;
+            position: sticky;
+            top: 0px;
+            font-weight: 100;
+            color: rgb(4, 0, 255);
+            text-shadow: 2.6px 2.6px 2px rgb(255, 255, 255),
+                 0 0 2.5em hotpink,
+                 0 0 0.25em hotpink;
+            font-size: 40px;
+            font-family: 'Train One', cursive;
+        }
+        p{
+            background-color: black;
+            font-size: 25px;
+            color: white;
+            font-family: 'ZCOOL XiaoWei', serif;
+            word-spacing: 8px;
+        }
+        a.vi{
+            color: whitesmoke;
+            text-shadow: none;
+            border: 2px ;
+        }
+        .pushable {
+        visibility: hidden;
+          position: relative;
+          border: none;
+          background: transparent;
+          padding: 0;
+          cursor: pointer;
+          outline-offset: 4px;
+          transition: filter 250ms;
+        }
+        .shadow {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          border-radius: 12px;
+          background: hsl(0deg 0% 0% / 0.25);
+          will-change: transform;
+          transform: translateY(2px);
+          transition:
+            transform
+            600ms
+            cubic-bezier(.3, .7, .4, 1);
+        }
+        .edge {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          border-radius: 12px;
+          background: linear-gradient(
+            to left,
+            hsl(340deg 100% 16%) 0%,
+            hsl(340deg 100% 32%) 8%,
+            hsl(340deg 100% 32%) 92%,
+            hsl(340deg 100% 16%) 100%
+          );
+        }
+        .front {
+          display: block;
+          position: relative;
+          padding: 12px 42px;
+          border-radius: 12px;
+          font-size: 1.25rem;
+          color: white;
+          background: hsl(345deg 100% 47%);
+          will-change: transform;
+          transform: translateY(-4px);
+          transition:
+            transform
+            600ms
+            cubic-bezier(.3, .7, .4, 1);
+        }
+        .pushable:hover {
+          filter: brightness(110%);
+        }
+        .pushable:hover .front {
+          transform: translateY(-6px);
+          transition:
+            transform
+            250ms
+            cubic-bezier(.3, .7, .4, 1.5);
+        }
+        .pushable:active .front {
+          transform: translateY(-2px);
+          transition: transform 34ms;
+        }
+        .pushable:hover .shadow {
+          transform: translateY(4px);
+          transition:
+            transform
+            250ms
+            cubic-bezier(.3, .7, .4, 1.5);
+        }
+        .pushable:active .shadow {
+          transform: translateY(1px);
+          transition: transform 34ms;
+        }
+        .pushable:focus:not(:focus-visible) {
+          outline: none;
+        }
+        @media only screen and (max-width: 500px) {
+            body{
+                background-size: contain;
+                margin: 20px;
+            }
+            h6{
+                position: fixed;
+                bottom: 5px;
+                right: 5px;
+                z-index: 5;
+                display: none;
+            }
+            .up,.back{
+                border-radius: 50%;
+                height: 50px;
+                visibility: hidden;
+            }
+            h5{
+                position: fixed;
+                bottom: 5px;
+                left: 5px;
+                z-index: 5;
+                display: none;
+            }
+            .hidden{
+                 visibility: hidden;
+            }
+            .vi{
+                visibility: visible;
+            }
+            .pushable{
+                visibility: visible;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h5>
+        <a href="index2.html">
+            <img class="back" src="https://www.icebergwebdesign.com/wp-content/uploads/2015/11/back-blue-button-xs.jpg" alt="Back">
+        </a>
+    </h5>
+    <h6><a href="#top">
+        <img class="up" src="https://png.pngtree.com/png-vector/20190806/ourlarge/pngtree-arrow-arrows-up-upload-blue-dotted-line-line-icon-png-image_1651826.jpg" alt="Up">
+    </a></h6>
+<br>
+<h2 id="top" style="text-align: center; background-color: black;"><a class="head" href="index.html">Sistemi Diellor</a></h2>
+
+<h1>Hyrje &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h1>
+<img width="300px" src="https://github.com/rishika-sharma/Images/blob/main/ss/1.jpg?raw=true" alt="solar system">
+
+<p>
+  Sistemi diellor është një vend i çuditshëm me planetët e tij të huaj, hënat misterioze dhe fenomenet e çuditshme që janë aq jashtë kësaj bote saqë i shmangen shpjegimit. Shkencëtarët kanë zbuluar vullkane që nxjerrin akull në Pluton, ndërsa Marsi është shtëpia e një kanioni vërtet "të madh" me madhësinë e Shteteve të Bashkuara. Mund të ketë edhe një planet gjigant, të pazbuluar që fshihet diku përtej Neptunit. Lexoni për të zbuluar disa nga faktet më të çuditshme rreth planetëve, planetëve xhuxh, kometave dhe objekteve të tjera të pabesueshme rreth sistemit diellor.
+</p>
+<br><br><br>
+
+    <h1>1. Urani është i anuar në anën e tij &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h1>
+    <button class="pushable">
+        <span class="front">
+          <a class="vi" href="https://github.com/rishika-sharma/Images/blob/main/ss/2.jpg?raw=true">Shiko Imazhin</a>
+        </span>
+      </button>
+    <img class="hidden" height="200px" src="https://github.com/rishika-sharma/Images/blob/main/ss/2.jpg?raw=true">
+    
+    <p>
+      Urani duket të jetë një top blu pa tipare në shikim të parë, por ky gjigant gazi i sistemit të jashtëm diellor është mjaft i çuditshëm pas inspektimit më të afërt. Së pari, planeti rrotullohet në anën e tij për arsye që shkencëtarët nuk i kanë kuptuar plotësisht. Shpjegimi më i mundshëm është se ajo iu nënshtrua një ose më shumë përplasjeve titanike në të kaluarën e lashtë. Në çdo rast, animi e bën Uranin unik midis planetëve të sistemit diellor.
+    </p>
+    <p>
+      Urani gjithashtu ka unaza të dobëta, të cilat u konfirmuan kur planeti kaloi para një ylli (nga këndvështrimi i Tokës) në 1977; ndërsa drita e yllit ndizet dhe fiket vazhdimisht, astronomët kuptuan se kishte më shumë sesa thjesht një planet që bllokonte dritën e tij të yjeve. Kohët e fundit, astronomët vunë re stuhi në atmosferën e Uranit disa vite pas afrimit të tij më të afërt me diellin, kur atmosfera do të ishte ngrohur më shumë.
+    </p>
+
+    <h1>2. 
+      Hëna e Jupiterit Io ka shpërthime të larta vullkanike&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h1>
+    <button class="pushable">
+        <span class="front">
+          <a class="vi" href="https://raw.githubusercontent.com/rishika-sharma/Images/main/ss/3.jpg">Shiko Imazhin</a>
+        </span>
+      </button>
+    <img class="hidden" height="200px" src="https://raw.githubusercontent.com/rishika-sharma/Images/main/ss/3.jpg">
+ 
+    <p>
+      Për ata prej nesh të mësuar me hënën relativisht joaktive të Tokës, peizazhi kaotik i Io-s mund të jetë një surprizë e madhe. Hëna Jovian ka qindra vullkane dhe konsiderohet hëna më aktive në sistemin diellor, duke dërguar shtëllunga deri në 250 milje në atmosferën e saj. Disa anije kozmike kanë kapur hënën duke shpërthyer; anija New Horizons e lidhur me Plutonin kapi një paraqitje të shkurtër të Io-s duke shpërthyer kur kaloi pranë në 2007.
+    </p>
+    <p>
+      Shpërthimet e Io-s vijnë nga graviteti i jashtëzakonshëm të cilit i ekspozohet hëna, duke u strehuar në pusin gravitacional të Jupiterit. Pjesa e brendshme e hënës tensionohet dhe relaksohet ndërsa ajo orbiton më afër dhe më larg planetit, duke gjeneruar energji të mjaftueshme për aktivitetin vullkanik. Shkencëtarët janë ende duke u përpjekur të kuptojnë se si nxehtësia përhapet në brendësi të Io-s, megjithatë, duke e bërë të vështirë parashikimin se ku ekzistojnë vullkanet duke përdorur vetëm modele shkencore.    </p>
+    <h1>3. Marsi ka vullkanin më të madh (që ne njohim)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h1>
+    <button class="pushable">
+        <span class="front">
+          <a class="vi" href="https://raw.githubusercontent.com/rishika-sharma/Images/main/ss/4.jpg">Shiko Imazhin</a>
+        </span>
+      </button>
+    <img class="hidden" height="200px" src="https://raw.githubusercontent.com/rishika-sharma/Images/main/ss/4.jpg">
+
+    <p>
+      Ndërsa Marsi duket i qetë tani, ne e dimë se në të kaluarën diçka shkaktoi formimin dhe shpërthimin e vullkaneve gjigante. Këtu përfshihet Olympus Mons, vullkani më i madh i zbuluar ndonjëherë në sistemin diellor. Në 374 milje (602 km) gjerësi, vullkani është i krahasueshëm me madhësinë e Arizonës. Është 16 milje (25 kilometra) i lartë, ose trefishi i lartësisë së malit Everest, mali më i lartë në Tokë.
+    </p>
+    <p>
+      Vullkanet në Mars mund të rriten në një madhësi kaq të madhe, sepse graviteti është shumë më i dobët në Planetin e Kuq sesa në Tokë. Por se si u krijuan ato vullkane në radhë të parë nuk dihet mirë. Ka një debat nëse Marsi ka një sistem tektonik të pllakave globale dhe nëse ai është aktiv.    </p>
+    <h1>4. Marsi ka gjithashtu luginën më të gjatë&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h1>
+    <button class="pushable">
+        <span class="front">
+          <a class="vi" href="https://raw.githubusercontent.com/rishika-sharma/Images/main/ss/5.jpg">View Image</a>
+        </span>
+      </button>
+    <img class="hidden" height="200px" src="https://raw.githubusercontent.com/rishika-sharma/Images/main/ss/5.jpg">
+
+ <p>
+  Nëse mendonit se Grand Canyon ishte i madh, kjo nuk është asgjë në krahasim me Valles Marineris. Me një gjatësi prej 2500 miljesh (4000 km), ky sistem i pamasë kanionesh marsiane është më shumë se 10 herë më i gjatë se Kanioni i Madh në Tokë. Valles Marineris i shpëtoi vëmendjes së anijes së hershme të Marsit (që fluturoi mbi pjesë të tjera të planetit) dhe më në fund u vu re nga misioni global i hartës Mariner 9 në 1971. Dhe çfarë pamjeje që duhej humbur - Valles Marineris është pothuajse aq e gjatë sa Shtetet e Bashkuara! </p>
+ <p>
+  Mungesa e tektonikës aktive të pllakave në Mars e bën të vështirë të kuptosh se si u formua kanioni. Madje disa shkencëtarë mendojnë se një zinxhir vullkanesh në anën tjetër të planetit, i njohur si Kreshta e Tharsisit, në njëfarë mënyre përkuli koren nga ana e kundërt e Marsit, duke krijuar kështu Valles Marineris. Nevojitet më shumë studim nga afër për të mësuar më shumë, por nuk mund të dërgoni lehtë një rover atje. </p>
+
+ <h1>5. Venusi ka erëra super të fuqishme.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h1>
+ <button class="pushable">
+     <span class="front">
+       <a class="vi" href="https://raw.githubusercontent.com/rishika-sharma/Images/main/ss/6.jpg">View Image</a>
+     </span>
+   </button>
+    <img class="hidden" height="200px" src="https://raw.githubusercontent.com/rishika-sharma/Images/main/ss/6.jpg">
+
+    <p>
+      Afërdita është një planet djallëzor me një mjedis me temperaturë të lartë dhe presion të lartë në sipërfaqen e tij. Dhjetë nga anijet kozmike Venera të mbrojtura shumë të Bashkimit Sovjetik qëndruan vetëm disa minuta në sipërfaqen e saj kur u ulën atje në vitet 1970.    </p>
+    <p>
+      Por edhe mbi sipërfaqen e tij, planeti ka një mjedis të çuditshëm. Shkencëtarët kanë zbuluar se erërat e sipërme të saj rrjedhin 50 herë më shpejt se rrotullimi i planetit. Anija kozmike evropiane Venus Express (e cila rrotulloi planetin midis 2006 dhe 2014) gjurmoi erërat për periudha të gjata dhe zbuloi ndryshime periodike. Ai zbuloi gjithashtu se erërat me forcë uragani dukej se po forcoheshin me kalimin e kohës.    </p>
+
+    <h1>6. Akull uji ka kudo.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h1>
+    <button class="pushable">
+        <span class="front">
+          <a class="vi" href="https://raw.githubusercontent.com/rishika-sharma/Images/main/ss/7.jpg">View Image</a>
+        </span>
+      </button>
+    <img class="hidden" height="200px" src="https://raw.githubusercontent.com/rishika-sharma/Images/main/ss/7.jpg">
+
+    <p>
+      Akulli i ujit dikur konsiderohej një substancë e rrallë në hapësirë, por tani e dimë se thjesht nuk po e kërkonim në vendet e duhura. Në fakt, akulli i ujit ekziston në të gjithë sistemin diellor. Akulli është një përbërës i zakonshëm i kometave dhe asteroideve, për shembull. Por ne e dimë se jo i gjithë akulli është i njëjtë. Ekzaminimi nga afër i kometës 67P/Churyumov–Gerasimenko nga anija kozmike Rosetta e Agjencisë Evropiane të Hapësirës, ​​për shembull, zbuloi një lloj tjetër akulli uji nga ai që gjendet në Tokë.    </p>
+    <p>
+      Thënë kështu, ne kemi parë akull uji në të gjithë sistemin diellor. Është në krateret me hije të përhershme në Merkur dhe në Hënë, megjithëse nuk e dimë nëse ka mjaftueshëm për të mbështetur kolonitë në ato vende. Marsi ka gjithashtu akull në polet e tij, në acar dhe me gjasë nën pluhurin e sipërfaqes. Edhe trupat më të vegjël në sistemin diellor kanë akull - hëna e Jupiterit Europa, hëna e Saturnit Enceladus dhe planeti xhuxh Ceres, ndër të tjera.    </p>
+
+    <h1>7. Anijet kozmike kanë vizituar çdo planet.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h1>
+    <button class="pushable">
+        <span class="front">
+          <a class="vi" href="https://raw.githubusercontent.com/rishika-sharma/Images/main/ss/8.jpg">View Image</a>
+        </span>
+      </button>
+    <img class="hidden" height="200px" src="https://raw.githubusercontent.com/rishika-sharma/Images/main/ss/8.jpg">
+
+    <p>
+      Ne kemi eksploruar hapësirën për më shumë se 60 vjet dhe kemi pasur fatin të marrim fotografi nga afër të dhjetëra objekteve qiellore. Më e rëndësishmja, ne kemi dërguar anije kozmike në të gjithë planetët në sistemin tonë diellor - Mërkuri, Venusi, Toka, Marsi, Jupiteri, Saturni, Urani dhe Neptuni - si dhe dy planetë xhuxh, Plutoni dhe Ceres. </p>    <p>
+        Pjesa më e madhe e fluturimeve erdhi nga anija kozmike binjake e NASA-s Voyager, e cila u largua nga Toka në 1977 dhe ende po transmeton të dhëna nga përtej sistemit diellor në hapësirën ndëryjore. Midis tyre, Voyagers kryen vizita në Jupiter, Saturn, Uran dhe Neptun, falë një radhitjeje të përshtatshme të planetëve të jashtëm. </p>
+
+    <h1>8. Mund të ketë jetë në sistemin diellor, diku.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h1>
+    <button class="pushable">
+        <span class="front">
+          <a class="vi" href="https://raw.githubusercontent.com/rishika-sharma/Images/main/ss/9.jpg">View Image</a>
+        </span>
+      </button>
+    <img class="hidden" height="200px" src="https://raw.githubusercontent.com/rishika-sharma/Images/main/ss/9.jpg">
+
+    <p>
+      Deri më tani, shkencëtarët nuk kanë gjetur asnjë provë se jeta ekziston diku tjetër në sistemin diellor. Por ndërsa mësojmë më shumë rreth asaj se si mikrobet "ekstreme" jetojnë në kanalet vullkanike nënujore ose në mjedise të ngrira, hapen më shumë mundësi se ku mund të jetojnë në planetë të tjerë. Këta nuk janë alienët që njerëzit dikur kishin frikë se jetonin në Mars, por jeta mikrobike në sistemin diellor është një mundësi. </p>    <p>
+        Jeta mikrobike tani konsiderohet aq e mundshme në Mars saqë shkencëtarët marrin masa paraprake të veçanta për të sterilizuar anijen kozmike përpara se t'i dërgojnë atje. Megjithatë, ky nuk është i vetmi vend. Me disa hëna të akullta të shpërndara rreth sistemit diellor, është e mundur që të ketë mikrobe diku në oqeanet e Evropës së Jupiterit, ose ndoshta nën akullin në Enceladus të Saturnit, midis vendndodhjeve të tjera. </p>
+
+    <h1>9. Mërkuri është ende në tkurrje.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h1>
+    <button class="pushable">
+        <span class="front">
+          <a class="vi" href="https://raw.githubusercontent.com/rishika-sharma/Images/main/ss/10.jpg">View Image</a>
+        </span>
+      </button>
+    <img class="hidden" height="200px" src="https://raw.githubusercontent.com/rishika-sharma/Images/main/ss/10.jpg">
+
+    <p>
+      Për shumë vite, shkencëtarët besonin se Toka ishte i vetmi planet tektonikisht aktiv në sistemin diellor. Kjo ndryshoi pasi anija kozmike Sipërfaqja e Mërkurit, Mjedisi Hapësinor, Gjeokimi dhe Rangimi (MESSENGER) bëri misionin e parë orbital në Mërkur, duke hartuar të gjithë planetin me definicion të lartë dhe duke parë veçoritë në sipërfaqen e tij.    </p>
+    <p>
+      Në vitin 2016, të dhënat nga MESSENGER (i cili ishte përplasur me Mërkurin siç ishte planifikuar në prill 2015) zbuluan forma tokësore të ngjashme me shkëmbinjtë e njohur si gërvishtjet e fajit. Për shkak se skarpat e gabimeve janë relativisht të vogla, shkencëtarët janë të sigurt se ato nuk janë krijuar shumë kohë më parë dhe se planeti është ende në tkurrje 4.5 miliardë vjet pas formimit të sistemit diellor.    </p>
+
+    <h1>10. Ka male në Pluton.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h1>
+    
+    <button class="pushable">
+        <span class="front">
+          <a class="vi" href="https://raw.githubusercontent.com/rishika-sharma/Images/main/ss/11.jpg">View Image</a>
+        </span>
+      </button>
+    <img class="hidden" height="200px" src="https://raw.githubusercontent.com/rishika-sharma/Images/main/ss/11.jpg">
+
+    <p>
+      Plutoni është një botë e vogël në skajin e sistemit diellor, kështu që në fillim u mendua se planeti xhuxh do të kishte një mjedis mjaft uniform. Kjo ndryshoi kur anija kozmike e NASA-s New Horizons fluturoi atje në 2015, duke dërguar fotografi që ndryshuan përgjithmonë pikëpamjen tonë për Plutonin    </p>
+    <p>
+      Ndër zbulimet befasuese ishin malet e akullta që janë 11,000 këmbë (3,300 metra) të larta, që tregojnë se Plutoni duhet të ketë qenë gjeologjikisht aktiv sa më pak se 100 milionë vjet më parë. Por aktiviteti gjeologjik kërkon energji dhe burimi i kësaj energjie brenda Plutonit është një mister. Dielli është shumë larg nga Plutoni për të gjeneruar nxehtësi të mjaftueshme për aktivitetin gjeologjik dhe nuk ka planetë të mëdhenj aty pranë që mund të kenë shkaktuar një ndërprerje të tillë me gravitetin.    </p>
+
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+
+</body>
+</html>

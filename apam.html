@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Kalam&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Train+One&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=ZCOOL+XiaoWei&display=swap" rel="stylesheet">
+     <link rel="icon" href="icon.png">
+    <title>Planetet dhe Henat?</title>
+    <style>
+        img{
+            height: 250px;
+        }
+        body{
+            background-image: url(https://i.pinimg.com/originals/8e/46/15/8e46150f790fbefe438d9c2767c32ad1.gif);
+            text-align: center;
+            background-repeat: repeat;
+            background-size: 400px;
+            margin: 0 200px;
+            color: white;
+        }
+        h6{
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            z-index: 5;
+        }
+        .up,.back{
+            border-radius: 50%;
+            height: 80px;
+        }
+        h5{
+            position: fixed;
+            bottom: 25px;
+            left: 25px;
+            z-index: 5;
+        }
+        p{
+            background-color: black;
+            font-size: 25px;
+            color: white;
+            font-family: 'ZCOOL XiaoWei', serif;
+            word-spacing: 8px;
+        }
+        h1{
+            z-index: 3;
+            background-color: black;
+            text-align: center;
+            position: sticky;
+            top: 0px;
+            font-weight: 100;
+            color: rgb(4, 0, 255);
+            text-shadow: 2.6px 2.6px 2px rgb(255, 255, 255),
+                 0 0 2.5em hotpink,
+                 0 0 0.25em hotpink;
+            font-size: 40px;
+            font-family: 'Train One', cursive;
+        }
+        li{
+            font-size: 35px;
+        }
+        .pushable {
+        visibility: hidden;
+          position: relative;
+          border: none;
+          background: transparent;
+          padding: 0;
+          cursor: pointer;
+          outline-offset: 4px;
+          transition: filter 250ms;
+        }
+        .shadow {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          border-radius: 12px;
+          background: hsl(0deg 0% 0% / 0.25);
+          will-change: transform;
+          transform: translateY(2px);
+          transition:
+            transform
+            600ms
+            cubic-bezier(.3, .7, .4, 1);
+        }
+        .edge {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          border-radius: 12px;
+          background: linear-gradient(
+            to left,
+            hsl(340deg 100% 16%) 0%,
+            hsl(340deg 100% 32%) 8%,
+            hsl(340deg 100% 32%) 92%,
+            hsl(340deg 100% 16%) 100%
+          );
+        }
+        .front {
+          display: block;
+          position: relative;
+          padding: 12px 42px;
+          border-radius: 12px;
+          font-size: 1.25rem;
+          color: white;
+          background: hsl(345deg 100% 47%);
+          will-change: transform;
+          transform: translateY(-4px);
+          transition:
+            transform
+            600ms
+            cubic-bezier(.3, .7, .4, 1);
+        }
+        .pushable:hover {
+          filter: brightness(110%);
+        }
+        .pushable:hover .front {
+          transform: translateY(-6px);
+          transition:
+            transform
+            250ms
+            cubic-bezier(.3, .7, .4, 1.5);
+        }
+        .pushable:active .front {
+          transform: translateY(-2px);
+          transition: transform 34ms;
+        }
+        .pushable:hover .shadow {
+          transform: translateY(4px);
+          transition:
+            transform
+            250ms
+            cubic-bezier(.3, .7, .4, 1.5);
+        }
+        .pushable:active .shadow {
+          transform: translateY(1px);
+          transition: transform 34ms;
+        }
+        .pushable:focus:not(:focus-visible) {
+          outline: none;
+        }
+        @media only screen and (max-width: 500px) {
+            body{
+                background-size: contain;
+                margin: 20px;
+            }
+            h6{
+                position: fixed;
+                bottom: 5px;
+                right: 5px;
+                z-index: 5;
+                display: none;
+            }
+            .up,.back{
+                border-radius: 50%;
+                height: 50px;
+                visibility: hidden;
+            }
+            h5{
+                position: fixed;
+                bottom: 5px;
+                left: 5px;
+                z-index: 5;
+                display: none;
+            }
+            .hidden{
+                 visibility: hidden;
+            }
+            .vi{
+                visibility: visible;
+            }
+            .pushable{
+                visibility: visible;
+            }
+            .img-saturn{
+                height: 130px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h5>
+        <a href="index2.html">
+            <img class="back" src="https://www.icebergwebdesign.com/wp-content/uploads/2015/11/back-blue-button-xs.jpg" alt="Back">
+        </a>
+    </h5>
+    <h6><a href="#top">
+        <img class="up" src="https://png.pngtree.com/png-vector/20190806/ourlarge/pngtree-arrow-arrows-up-upload-blue-dotted-line-line-icon-png-image_1651826.jpg" alt="Up">
+    </a></h6>
+<h2 id="top" style="text-align: center; background-color: black;"><a class="head" href="index.html">Sistemi Diellor</a></h2>
+
+<br><br>
+<h1>Mërkurri</h1>
+<img src="https://raw.githubusercontent.com/rishika-sharma/Images/main/ss/10.jpg">
+<p>
+    Mërkuri (0,4 AU nga Dielli) është planeti më i afërt me Diellin dhe mesatarisht, të shtatë planetët e tjerë. Planeti më i vogël në Sistemin Diellor (0,055 M⊕), Mërkuri nuk ka satelitë natyrorë. Përveç kratereve të goditjes, veçoritë e vetme gjeologjike të njohura të tij janë kreshtat me lobe ose rupi që ndoshta janë prodhuar nga një periudhë tkurrjeje në fillim të historisë së tij. Atmosfera shumë e dobët e Mërkurit përbëhet nga atome të shpërthyera nga sipërfaqja e tij nga era diellore. Bërthama e tij relativisht e madhe prej hekuri dhe manteli i hollë nuk janë shpjeguar ende në mënyrë adekuate. Hipotezat përfshijnë se shtresat e saj të jashtme u hoqën nga një goditje gjigante, ose se u pengua të grumbullohej plotësisht nga energjia e Diellit të ri.</p>
+
+<br><br>
+<h1>Afërdita</h1>
+<img src="https://github.com/rishika-sharma/Images/blob/main/480px-PIA23791-Venus-NewlyProcessedView-20200608-removebg-preview.png?raw=true">
+<p>
+    Venusi (0,7 AU nga Dielli) është afër në madhësi me Tokën (0,815 M⊕) dhe, si Toka, ka një mantel të trashë silikat rreth një bërthame hekuri, një atmosferë të konsiderueshme dhe dëshmi të aktivitetit të brendshëm gjeologjik. Është shumë më e thatë se Toka dhe atmosfera e saj është nëntëdhjetë herë më e dendur. Venusi nuk ka satelitë natyrorë. Është planeti më i nxehtë, me temperatura sipërfaqësore mbi 400 °C (752 °F), ka shumë të ngjarë për shkak të sasisë së gazeve serrë në atmosferë. Asnjë provë përfundimtare e aktivitetit gjeologjik aktual nuk është zbuluar në Venus, por ajo nuk ka fushë magnetike që do të parandalonte varfërimin e atmosferës së saj të konsiderueshme, gjë që sugjeron se atmosfera e saj po rimbushet nga shpërthimet vullkanike.</p>
+
+<br><br>
+<h1>Toka</h1>
+<img src="https://github.com/rishika-sharma/Images/blob/main/480px-The_Earth_seen_from_Apollo_17-removebg-preview.png?raw=true">
+<p>
+    Toka (1 AU nga Dielli) është më i madhi dhe më i denduri nga planetët e brendshëm, i vetmi që dihet se ka aktivitet aktual gjeologjik dhe i vetmi vend ku dihet se ekziston jeta. Hidrosfera e tij e lëngshme është unike midis planetëve tokësorë dhe është i vetmi planet ku është vëzhguar tektonika e pllakave. Atmosfera e Tokës është rrënjësisht e ndryshme nga ajo e planetëve të tjerë, pasi është ndryshuar nga prania e jetës për të përmbajtur 21% oksigjen të lirë. Ai ka një satelit natyror, Hënën, i vetmi satelit i madh i një planeti tokësor në Sistemin Diellor.</p>
+
+<br><br>
+<h1>Marsi</h1>
+<img src="https://github.com/rishika-sharma/Images/blob/main/480px-OSIRIS_Mars_true_color-removebg-preview.png?raw=true">
+<p>
+    Marsi (1,5 AU nga Dielli) është më i vogël se Toka dhe Venusi (0,107 M⊕). Ajo ka një atmosferë kryesisht me dioksid karboni me një presion sipërfaqësor prej 6.1 milibar (afërsisht 0.6% e atij të Tokës). Sipërfaqja e saj, e mbushur me vullkane të mëdha, si Olympus Mons, dhe lugina të çara, si Valles Marineris, tregon aktivitet gjeologjik që mund të ketë vazhduar deri para 2 milionë vjetësh. Ngjyra e saj e kuqe vjen nga oksidi i hekurit (ndryshku) në tokën e tij. Marsi ka dy satelitë të vegjël natyrorë (Deimos dhe Phobos) që mendohet se janë ose asteroidë të kapur, ose mbetje të hedhura nga një ndikim masiv në fillim të historisë së Marsit.</p>
+
+<br><br>
+<h1>Jupiteri</h1>
+<img src="https://github.com/rishika-sharma/Images/blob/main/480px-Jupiter_and_its_shrunken_Great_Red_Spot-removebg-preview.png?raw=true">
+<p>
+    Jupiteri (5.2 AU), në 318 M⊕, është 2.5 herë më i madh se masa e të gjithë planetëve të tjerë të mbledhur së bashku. Ai përbëhet kryesisht nga hidrogjen dhe helium. Nxehtësia e fortë e brendshme e Jupiterit krijon veçori gjysmë të përhershme në atmosferën e tij, të tilla si brezat e reve dhe Njolla e Madhe e Kuqe. Jupiteri ka 79 satelitë të njohur. Katër më të mëdhenjtë, Ganymede, Callisto, Io dhe Europa, tregojnë ngjashmëri me planetët tokësorë, si vullkanizmi dhe ngrohja e brendshme. Ganymede, sateliti më i madh në Sistemin Diellor, është më i madh se Merkuri.</p>
+
+<br><br>
+
+
+<br><br>
+<h1>Saturni</h1>
+<img class="img-saturn" src="https://github.com/rishika-sharma/Images/blob/main/480px-Saturn_during_Equinox-removebg-preview.png?raw=true">
+<p>
+    Saturni (9,5 AU), i dalluar për sistemin e tij të gjerë të unazave, ka disa ngjashmëri me Jupiterin, si përbërja atmosferike dhe magnetosfera. Megjithëse Saturni ka 60% të vëllimit të Jupiterit, ai është më pak se një e treta e masës, në 95 M⊕. Saturni është i vetmi planet i Sistemit Diellor që është më pak i dendur se uji. Unazat e Saturnit përbëhen nga grimca të vogla akulli dhe shkëmbi. Saturni ka 82 satelitë të konfirmuar të përbërë kryesisht nga akulli. Dy prej tyre, Titan dhe Enceladus, tregojnë shenja të aktivitetit gjeologjik. Titani, hëna e dytë më e madhe në Sistemin Diellor, është më e madhe se Merkuri dhe i vetmi satelit në Sistemin Diellor me një atmosferë të konsiderueshme.</p>
+
+<br><br>
+<h1>Urani</h1>
+<img src="https://github.com/rishika-sharma/Images/blob/main/480px-Uranus2-removebg-preview.png?raw=true">
+<p>
+    Urani (19.2 AU), në 14 M⊕, është më i lehtë nga planetët e jashtëm. Në mënyrë unike midis planetëve, ai rrotullohet rreth Diellit në anën e tij; pjerrësia e saj boshtore është mbi nëntëdhjetë gradë ndaj ekliptikës. Ai ka një bërthamë shumë më të ftohtë se planetët e tjerë gjigantë dhe rrezaton shumë pak nxehtësi në hapësirë. Urani ka 27 satelitë të njohur, më të mëdhenjtë janë Titania, Oberon, Umbriel, Ariel dhe Miranda.</p>
+
+<br><br>
+<h1>Neptuni</h1>
+<img src="https://github.com/rishika-sharma/Images/blob/main/480px-Neptune_-_Voyager_2__29347980845__flatten_crop-removebg-preview.png?raw=true">
+<p>
+    Neptuni (30.1 AU), megjithëse pak më i vogël se Urani, është më masiv (17 M⊕) dhe për këtë arsye më i dendur. Rrezaton më shumë nxehtësi të brendshme, por jo aq sa Jupiteri apo Saturni. Neptuni ka 14 satelitë të njohur. Më i madhi, Triton, është gjeologjikisht aktiv, me gejzerë të azotit të lëngshëm. Triton është i vetmi satelit i madh me një orbitë retrograde. Neptuni shoqërohet në orbitën e tij nga disa planetë të vegjël, të quajtur trojanë të Neptunit, që janë në rezonancë 1:1 me të.</p>
+
+<br><br>
+
+<h1>Plutoni</h1>
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Pluto_in_True_Color_-_High-Res.jpg/480px-Pluto_in_True_Color_-_High-Res.jpg">
+<p>
+    Planeti xhuxh Plutoni (mesatarja 39 AU) është objekti më i madh i njohur në brezin Kuiper. Kur u zbulua në vitin 1930, u konsiderua si planeti i nëntë; kjo ndryshoi në vitin 2006 me miratimin e një përkufizimi zyrtar të planetit. Plutoni ka një orbitë relativisht ekscentrike të prirur 17 gradë në planin ekliptik dhe që varion nga 29.7 AU nga Dielli në perihelion (brenda orbitës së Neptunit) deri në 49.5 AU në aphelion. Plutoni ka një rezonancë 3:2 me Neptunin, që do të thotë se Plutoni rrotullohet dy herë rreth Diellit për çdo tre orbita të Neptunit. Objektet e rripit Kuiper orbitat e të cilave ndajnë këtë rezonancë quhen plutinos.</p>
+
+<br><br>
+
+<button class="pushable">
+    <span class="front">
+      <a class="vi" href="https://github.com/rishika-sharma/Images/blob/main/25_solar_system_objects_smaller_than_Earth.jpg?raw=true">View Image</a>
+    </span>
+  </button>
+<img class="hidden" src="https://github.com/rishika-sharma/Images/blob/main/25_solar_system_objects_smaller_than_Earth.jpg?raw=true" height="1000px">
+<br><br><br><br><br>
+<h1>Moons</h1>
+
+<ul>
+    <li>Mercury → 0 </li>
+    <li>Venus → 0 </li>
+    <li>Earth → 1 </li>
+    <li>Mars → 2 </li>
+    <li>Jupiter → 63 </li>
+    <li>Saturn → 56 </li>
+    <li>Uranus → 27 </li>
+    <li>Neptune → 13 </li> 
+    <li>Pluto → 3 </li> 
+</ul>
+
+<br><br><br><br><br>
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/FullMoon2010.jpg/330px-FullMoon2010.jpg" alt="Moon">
+<br><br><br><br><br><br><br><br><br><br>
+
+
+</body>
+</html>
